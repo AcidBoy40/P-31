@@ -3,7 +3,7 @@ var Engine = Matter.Engine,
   Events = Matter.Events,
   Bodies = Matter.Bodies;
  
-var particles = [];
+var particles;
 var plinkos = [];
 var divisions =[];
 var divisionHeight=300;
@@ -63,6 +63,7 @@ function draw() {
 
   if(frameCount % 60 === 0){
     particles.push(new Particle(random(width/2-10, width/2+10), 10, 10));
+    particles.display();
   }
   //display the paricles 
 
